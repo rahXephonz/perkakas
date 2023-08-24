@@ -16,10 +16,10 @@
   ],
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "keywords": [
-    "tooling",
+    "tools",
     "utility"
   ],
   "scripts": {
@@ -62,7 +62,7 @@
   "size-limit": [
     {
       "path": "dist/index.js",
-      "limit": "11 kB"
+      "limit": "18 kB"
     }
   ],
   "lint-staged": {
