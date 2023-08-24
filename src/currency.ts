@@ -70,10 +70,95 @@ export function formatUSD(number: number): string {
  */
 export const formatK: ({ value }: { value: number }) => string = ({
   value,
-}) => {
+}): string => {
   return (
     Math.abs(value) > 999
       ? (Math.sign(value) * Math.round(Math.abs(value) / 100)) / 10 + "K"
       : Math.sign(value) * Math.abs(value)
   ).toString();
 };
+
+/**
+  * Converts a number to a text representation in Indonesian.
+  * @param {number} number - The number to convert.
+  * @returns {string} Text representation in Indonesian of the given number.
+  * @example
+  * // Uses a function to convert numbers to text
+  * const number = 1234567;
+  * const text = countableNumber(number);
+  * // -> Output: "Satu Juta Dua Ratus Tiga Puluh Empat Ribu Lima Ratus Enam Puluh Tujuh"
+*/
+export function countableNumber(number: number): string {
+  const words = [
+    "",
+    "Satu",
+    "Dua",
+    "Tiga",
+    "Empat",
+    "Lima",
+    "Enam",
+    "Tujuh",
+    "Delapan",
+    "Sembilan",
+    "Sepuluh",
+    "Sebelas",
+    "Dua Belas",
+    "Tiga Belas",
+    "Empat Belas",
+    "Lima Belas",
+    "Enam Belas",
+    "Tujuh Belas",
+    "Delapan Belas",
+    "Sembilan Belas",
+  ];
+
+  const tens = [
+    "",
+    "Sepuluh",
+    "Dua Puluh",
+    "Tiga Puluh",
+    "Empat Puluh",
+    "Lima Puluh",
+    "Enam Puluh",
+    "Tujuh Puluh",
+    "Delapan Puluh",
+    "Sembilan Puluh",
+  ];
+
+  const units = ["", "Ribu", "Juta", "Miliar", "Triliun", "Kuadriliun"];
+
+  function convertToWords(num: number, unitIndex?: number) {
+    if (num === 0) {
+      return "";
+    } else if (num < 20) {
+      return words[num];
+    } else if (num < 100) {
+      return tens[Math.floor(num / 10)] + " " + words[num % 10];
+    } else {
+      const hundreds =
+        words[Math.floor(num / 100)] !== ""
+          ? words[Math.floor(num / 100)] + " Ratus "
+          : "";
+      return hundreds + convertToWords(num % 100);
+    }
+  }
+
+  let result = "";
+  let unitIndex = 0;
+
+  while (number > 0) {
+    const currentChunk = number % 1000;
+    if (currentChunk !== 0) {
+      result =
+        convertToWords(currentChunk, unitIndex) +
+        " " +
+        units[unitIndex] +
+        " " +
+        result;
+    }
+    number = Math.floor(number / 1000);
+    unitIndex++;
+  }
+
+  return result.trim();
+}

@@ -1,4 +1,4 @@
-import { formatK, formatRupiah } from "../currency";
+import { countableNumber, formatK, formatRupiah } from "../currency";
 
 describe("formatRupiah", () => {
   it("should format the number into Indonesian Rupiah format", () => {
@@ -30,5 +30,23 @@ describe("formatK", () => {
     const number = -2500;
     const formattedNumber = formatK({ value: number });
     expect(formattedNumber).toBe("-2.5K");
+  });
+});
+
+describe("countableNumber", () => {
+  it('should convert 1234567 to "Satu Juta Dua Ratus Tiga Puluh Empat Ribu Lima Ratus Enam Puluh Tujuh"', () => {
+    const input = 1234567;
+    const result = countableNumber(input);
+    expect(result).toBe(
+      "Satu Juta Dua Ratus Tiga Puluh Empat Ribu Lima Ratus Enam Puluh Tujuh",
+    );
+  });
+
+  it('should convert 987654321 to "Sembilan Ratus Delapan Puluh Tujuh Juta Enam Ratus Lima Puluh Empat Ribu Tiga Ratus Dua Puluh Satu"', () => {
+    const input = 987654321;
+    const result = countableNumber(input);
+    expect(result).toBe(
+      "Sembilan Ratus Delapan Puluh Tujuh Juta Enam Ratus Lima Puluh Empat Ribu Tiga Ratus Dua Puluh Satu",
+    );
   });
 });

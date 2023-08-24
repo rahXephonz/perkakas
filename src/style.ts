@@ -1,4 +1,4 @@
-/**
+/*:*
  * Truncates a given text to a specified length and adds ellipsis (...) at the specified position.
  *
  * @param {Object} options - Options for text truncation.
