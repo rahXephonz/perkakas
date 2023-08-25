@@ -28,6 +28,7 @@ dist
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 
 build/Release
+Makefile
 
 # Dependency directories
 
@@ -141,3 +142,4 @@ tsconfig.json
 .gitignore
 .eslintignore
 .husky
+rollup.config.ts

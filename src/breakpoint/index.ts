@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { isBrowser, useIsomorphicEffect } from "./utility";
+import { isBrowser, useIsomorphicEffect } from "../utility";
 
-export type CreatorReturnType = {
+export type HooksReturnType = {
   /**
    * Use breakpoint value from given breakpoint token
    *
@@ -137,5 +137,5 @@ export const createLayout = (screens: object | undefined) => {
     useBreakpoint,
     useBreakpointEffect,
     useBreakpointValue,
-  } as CreatorReturnType;
+  } as HooksReturnType;
 };

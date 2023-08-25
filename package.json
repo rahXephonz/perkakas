@@ -1,6 +1,6 @@
 {
   "name": "perkakas",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "Tooling or utility for your works",
   "private": false,
   "homepage": "https://github.com/ioofy/perkakas",
@@ -14,6 +14,7 @@
     "utility"
   ],
   "scripts": {
+    "push:git": "git push origin main",
     "prepare": "husky install",
     "release": "standard-version",
     "build": "rollup -c rollup.config.ts",
@@ -28,7 +29,6 @@
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@size-limit/preset-small-lib": "^8.2.6",
     "@types/jest": "^29.1.2",
-    "@types/react": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
     "commitizen": "^4.2.5",
@@ -44,24 +44,23 @@
     "lint-staged": "^11.2.6",
     "prettier": "^2.3.2",
     "rollup": "^1.31.0",
-    "rollup-plugin-alias": "^2.2.0",
     "rollup-plugin-typescript2": "^0.25.3",
     "size-limit": "^8.2.6",
     "standard-version": "^9.5.0",
     "terser": "^5.19.2",
     "ts-jest": "^29.0.3",
-    "tsup": "^7.0.0",
     "typescript": "^4.5.2"
   },
   "peerDependencies": {
     "clsx": ">=1.2.1",
     "react": ">=18.2.0",
-    "tailwind-merge": ">=1.14.0"
+    "tailwind-merge": ">=1.14.0",
+    "@types/react": ">=18.2.21"
   },
   "size-limit": [
     {
       "path": "dist/index.cjs.js",
-      "limit": "15 kB"
+      "limit": "5 kB"
     }
   ],
   "lint-staged": {
@@ -77,8 +76,5 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "perkakas": "^0.1.1"
   }
 }

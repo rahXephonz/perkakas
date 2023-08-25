@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
     "module": "esnext",
+    "outDir": "./dist",
     "target": "esnext",
-    "declaration": false,
     "moduleResolution": "node",
     "sourceMap": true,
     "allowJs": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
+  "include": ["src/**/*.ts"],
   "exclude": [
     "node_modules",
     "dist",

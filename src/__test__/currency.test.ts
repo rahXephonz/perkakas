@@ -11,6 +11,10 @@ describe("formatRupiah", () => {
   it("should return empty string if the input number is empty", () => {
     expect(formatRupiah("", "Rp.")).toEqual("");
   });
+
+  it("should return an custom symbol if given", () => {
+    expect(formatRupiah("1000", "Rp.", ".")).toEqual("Rp. 1.000");
+  });
 });
 
 describe("formatK", () => {

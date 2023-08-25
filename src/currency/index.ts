@@ -1,28 +1,29 @@
 /**
- * Formats a number into Indonesian Rupiah format.
- * @param {string} num - The number to be formatted as a string.
- * @param {string} [prefix] - The prefix to be added to the formatted number. (Optional)
- * @returns {string} The formatted number in Indonesian Rupiah format.
+ * Formats a numeric value as an Indonesian Rupiah (IDR) currency string.
  *
- * @example
- * const amount = '1000000';
- * const formattedAmount = formatRupiah(amount, 'Rp.');
- * // => 'Rp. 1.000.000'
+ * @param num - The numeric value to format as IDR.
+ * @param prefix - The currency prefix, which defaults to "Rp.".
+ * @param symbol - The symbol used for thousands separator, which defaults to ",".
+ * @returns The formatted IDR currency string.
  */
-export function formatRupiah(num: string, prefix: "" | "Rp." = "Rp."): string {
+export function formatRupiah(
+  num: string,
+  prefix: "" | "Rp." = "Rp.",
+  symbol = ",",
+): string {
   let separator: string;
   let numberString = num.replace(/[^,\d]/g, "").toString(),
     split = numberString.split(","),
-    sisa = split[0].length % 3,
-    rupiah = split[0].substring(0, sisa),
-    ribuan = split[0].substring(sisa).match(/\d{3}/gi);
+    rest = split[0].length % 3,
+    rupiah = split[0].substring(0, rest),
+    ribuan = split[0].substring(rest).match(/\d{3}/gi);
 
   if (ribuan) {
-    separator = sisa ? "." : "";
+    separator = rest ? "." : "";
     rupiah += separator + ribuan.join(".");
   }
 
-  rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+  rupiah = split[1] != undefined ? rupiah + symbol + split[1] : rupiah;
 
   if (prefix === undefined) return rupiah;
   if (rupiah) return "Rp. " + rupiah;
