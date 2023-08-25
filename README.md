@@ -71,11 +71,11 @@ Then pass the extracted `screens` to the `create` function:
 ```ts
 // /hooks/tailwind.ts
 
-import create from "@kodingdotninja/use-tailwind-breakpoint";
+import { createLayout } from "perkakas";
 
 import screens from "path/to/tailwind.screens.js";
 
-export const { useBreakpoint } = create(screens);
+export const { useBreakpoint } = createLayout(screens);
 ```
 
 ### Without Tailwind CSS
@@ -440,21 +440,10 @@ This repository contains a TypeScript function that takes an array of class name
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
 - [Function](#function)
   - [`tw`](#tw)
 - [Examples](#examples)
 - [License](#license)
-
-## <a name="getting-started"></a>Getting Started
-
-To use this utility function, follow these steps:
-
-1. Clone or download this repository to your local machine.
-
-2. Include the `tw` function in your TypeScript project.
-
-3. Call the function with an array of class names or class values to generate a merged class name string.
 
 ## <a name="function"></a>Function
 
@@ -485,6 +474,39 @@ const mergedClassName = tw(
 console.log(mergedClassName);
 // Output: "text-blue-500 bg-gray-200 text-sm bg-blue-500 hover:bg-blue-700"
 ```
+
+# Common Utility Function
+
+Maybe some common utility is avaliable in this package like copyToClipBoard
+
+## Usage
+
+```ts
+import { copyToClipBoard } from "perkakas";
+
+// Basic usage: Copy text to the clipboard
+copyToClipBoard({
+  text: "Copy me!",
+});
+
+// Advanced usage: Copy text and perform an action after copying
+copyToClipboard({
+  text: "Hello, Clipboard!",
+  action: () => {
+    alert("Text copied to clipboard!");
+  },
+});
+```
+
+## Parameters
+
+- **options** (object):
+  - **text** (string, required): The text you want to copy to the clipboard.
+  - **action** (function, optional): An optional callback function to execute after the text is successfully copied to the clipboard.
+
+## Error Handling
+
+If an error occurs during the copying process, the function will catch the error and log it to the console.
 
 ## License
 
