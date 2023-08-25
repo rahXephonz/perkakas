@@ -1,4 +1,4 @@
-import { titleCase, replaceSpecialChar, isSpecialChar } from "../manipulate";
+import { isSpecialChar, replaceSpecialChar, titleCase } from "../string";
 
 describe("titleCase function", () => {
   it("should convert a string to title case", () => {
