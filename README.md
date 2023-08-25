@@ -1,6 +1,6 @@
 <div align="center">
 <h1 id="toc">🛠 perkakas</h1>
-<p>A tools or utility for your works</p>
+<p>A tools or utility for your works./p>
 </div>
 
 <div align="center">
@@ -23,6 +23,21 @@ Run one of the following command inside your project directory to install the pa
     $ yarn add perkakas@latest
     or
     $ pnpm add perkakas@latest
+
+This package is support for threeshaking imports. Just import separate a function it will looks like
+
+```ts
+import * as perkakas from "perkakas"; // 1.5kb
+```
+
+```ts
+// into
+
+//define specific files that want to import
+import { createLayout } from "perkakas"; // 609b
+```
+
+## Usage Reference
 
 # Responsive Breakpoint Utility Functions
 
@@ -50,6 +65,7 @@ Another option is to extract all [`screens`](https://tailwindcss.com/docs/breakp
 const screens = {
   sm: "640px",
   md: "768px",
+  lg: "1024px",
   // ...
 };
 ```
