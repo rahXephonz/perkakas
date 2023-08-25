@@ -2,12 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.1.3](https://github.com/ioofy/perkakas/compare/v0.1.2...v0.1.3) (2023-08-25)
+### [0.1.4](https://github.com/ioofy/perkakas/compare/v0.1.3...v0.1.4) (2023-08-25)
 
+
+### Bug Fixes
+
+* tsdoc not work on textEllipsis utility and common files doesnt exporting ([7db8080](https://github.com/ioofy/perkakas/commit/7db8080df69ccfcf9c4b98aba7ef97266a93e680))
+
+### [0.1.3](https://github.com/ioofy/perkakas/compare/v0.1.2...v0.1.3) (2023-08-25)
 
 ### Features
 
-* adding new common utility and update README ([c9594a3](https://github.com/ioofy/perkakas/commit/c9594a3024848736cd287184cd74763f9dc8321d))
+- adding new common utility and update README ([c9594a3](https://github.com/ioofy/perkakas/commit/c9594a3024848736cd287184cd74763f9dc8321d))
 
 ### 0.1.2 (2023-08-25)
 
