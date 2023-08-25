@@ -29,14 +29,11 @@
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@size-limit/preset-small-lib": "^8.2.6",
     "@types/jest": "^29.1.2",
-    "@types/react": "^17.0.4",
+    "@types/react": "^18.2.21",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
-    "clsx": "^1.2.1",
-    "react": "^17.0.2",
-    "tailwind-merge": "^1.14.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
@@ -56,16 +53,10 @@
     "ts-jest": "^29.0.3",
     "typescript": "^4.5.2"
   },
-  "peerDependencies": {
-    "@types/react": ">=17.0.4",
-    "clsx": ">=1.2.1",
-    "react": ">=17.0.2",
-    "tailwind-merge": ">=1.14.0"
-  },
   "size-limit": [
     {
       "path": "dist/index.cjs.js",
-      "limit": "5 kB"
+      "limit": "12 kB"
     }
   ],
   "lint-staged": {
@@ -78,6 +69,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "clsx": "^1.2.1",
+    "tailwind-merge": "^1.14.0"
   },
   "publishConfig": {
     "access": "public"
