@@ -32,7 +32,6 @@ Makefile
 
 # Dependency directories
 
-node_modules/
 jspm_packages/
 
 # Optional npm cache directory
@@ -138,6 +137,7 @@ src/
 commitlint.config.cjs
 jest.config.js
 tsup.config.ts
+node_modules
 tsconfig.json
 .gitignore
 .eslintignore

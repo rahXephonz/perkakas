@@ -1,6 +1,6 @@
 <div align="center">
 <h1 id="toc">🛠 perkakas</h1>
-<p>A tools or utility for your works./p>
+<p>A tools or utility for your works.</p>
 </div>
 
 <div align="center">
@@ -35,6 +35,12 @@ import * as perkakas from "perkakas"; // 1.5kb
 
 //define specific files that want to import
 import { createLayout } from "perkakas"; // 609b
+```
+
+or import to specific files
+
+```ts
+import { createLayout } from "perkakas/breakpoint";
 ```
 
 ## Usage Reference
