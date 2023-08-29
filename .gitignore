@@ -103,3 +103,8 @@ $RECYCLE.BIN/
 
 # Cache
 .eslintcache
+
+*.d.ts
+*.cjs.js
+*.esm.js
+utility

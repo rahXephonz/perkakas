@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "declarationDir": "./dist",
+    "declarationDir": "./",
     "module": "esnext",
-    "outDir": "./dist",
+    "outDir": "./",
     "target": "esnext",
     "moduleResolution": "node",
     "sourceMap": true,
