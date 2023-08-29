@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { isBrowser, useIsomorphicEffect } from "../utility";
+import { isBrowser, useIsomorphicEffect } from "./utility";
 
 export type HooksReturnType = {
   /**
