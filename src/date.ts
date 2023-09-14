@@ -12,7 +12,7 @@
 export const getUSADateFormat = (dateString: string) => {
   const dateFormat = new Date(dateString);
 
-  const result = dateFormat.toLocaleString("en-us", {
+  const result = dateFormat.toLocaleString("en-US", {
     month: "short",
     day: "2-digit",
     year: "numeric",
@@ -35,7 +35,7 @@ export const getUSADateFormat = (dateString: string) => {
 export const getUSADateWithLongMonthFormat = (date: string) => {
   const dateFormat = new Date(date);
 
-  const result = dateFormat.toLocaleString("en-us", {
+  const result = dateFormat.toLocaleString("en-US", {
     month: "long",
     day: "2-digit",
     year: "numeric",
