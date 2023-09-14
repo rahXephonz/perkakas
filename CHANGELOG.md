@@ -2,12 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.1.9](https://github.com/rahxephonz/perkakas/compare/v0.1.8...v0.1.9) (2023-09-14)
+### [0.1.10](https://github.com/rahxephonz/perkakas/compare/v0.1.9...v0.1.10) (2023-09-14)
 
 
 ### Features
 
-* adding compose function, list country code and remove tw utility ([a2764dc](https://github.com/rahxephonz/perkakas/commit/a2764dce09c46efb86d5cc7ad633e4a5eba23d30))
+* adding form utility data conversion ([92cfb24](https://github.com/rahxephonz/perkakas/commit/92cfb24bc5774c1336e28cd25489c3755023d64b))
+
+### [0.1.9](https://github.com/rahxephonz/perkakas/compare/v0.1.8...v0.1.9) (2023-09-14)
+
+### Features
+
+- adding compose function, list country code and remove tw utility ([a2764dc](https://github.com/rahxephonz/perkakas/commit/a2764dce09c46efb86d5cc7ad633e4a5eba23d30))
 
 ### [0.1.8](https://github.com/rahxephonz/perkakas/compare/v0.1.7...v0.1.8) (2023-08-29)
 
