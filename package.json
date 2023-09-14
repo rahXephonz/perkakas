@@ -55,7 +55,7 @@
   },
   "size-limit": [
     {
-      "path": "dist/index.cjs.js",
+      "path": "./index.cjs.js",
       "limit": "12 kB"
     }
   ],
@@ -71,7 +71,7 @@
     }
   },
   "dependencies": {
-    "clsx": "^1.2.1"
+    "react": "^18.2.0"
   },
   "publishConfig": {
     "access": "public"

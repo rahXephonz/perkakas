@@ -27,7 +27,7 @@ Run one of the following command inside your project directory to install the pa
 This package is support for threeshaking imports. Just import separate a function it will looks like
 
 ```ts
-import * as perkakas from "perkakas"; // 1.5kb
+import * as perkakas from "perkakas"; // 7.5kb
 ```
 
 ```ts
@@ -399,6 +399,72 @@ specialChars.forEach(char => {
 
 const titleCased = titleCase(input);
 console.log(titleCased); // Output: "This Is A Test String"
+```
+
+# Data Conversion Utility Functions
+
+This repository contains utility functions for converting between JSON objects and FormData.
+
+## Table of Contents
+
+- [Functions](#functions)
+  - [convertJsonObjectToFormData](#convertjsonobjecttoformdata)
+  - [convertFormdataToJsonObject](#convertformdatatojsonobject)
+- [Examples](#examples)
+- [License](#license)
+
+## <a name="functions"></a>Functions
+
+### <a name="convertjsonobjecttoformdata"></a>`convertJsonObjectToFormData(jsonObject)`
+
+Converts a JSON object to FormData.
+
+- `jsonObject` (object): The JSON object to convert.
+
+Returns: A FormData object with fields populated from the JSON object.
+
+### <a name="convertformdatatojsonobject"></a>`convertFormdataToJsonObject(formData)`
+
+Converts FormData to a JSON object.
+
+- `formData` (FormData): The FormData object to convert.
+
+Returns: A JSON object where keys are form field names and values are form field values.
+
+## <a name="examples"></a>Examples
+
+### Using `convertJsonObjectToFormData`
+
+Here's an example of how to use the `convertJsonObjectToFormData` function:
+
+```javascript
+import { convertJsonObjectToFormData } from "your-data-conversion-module";
+
+// Create a JSON object
+const jsonObject = {
+  name: "John Doe",
+  email: "john@example.com",
+  age: 30,
+};
+
+// Convert JSON object to FormData
+const formData = convertJsonObjectToFormData(jsonObject);
+```
+
+### Using `convertFormdataToJsonObject`
+
+Here's an example of how to use the `convertFormdataToJsonObject` function:
+
+```javascript
+import { convertFormdataToJsonObject } from "your-data-conversion-module";
+
+const formData = new FormData();
+formData.append("name", "John Doe");
+formData.append("email", "john@example.com");
+formData.append("age", "30");
+
+// Convert FormData to a JSON object
+const jsonObject = convertFormdataToJsonObject(formData);
 ```
 
 # Style Utility Function
