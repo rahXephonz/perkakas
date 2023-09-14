@@ -15,7 +15,7 @@ export default {
       format: "es",
     },
   ],
-  external: ["react", "tailwind-merge", "clsx"],
+  external: ["react"],
   plugins: [
     resolve(),
     commonjs(),

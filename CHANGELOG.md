@@ -6,11 +6,10 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.1.7](https://github.com/rahxephonz/perkakas/compare/v0.1.6...v0.1.7) (2023-08-29)
 
-
 ### Features
 
-* make package can import for specific files ([09cc773](https://github.com/rahxephonz/perkakas/commit/09cc773b4332bc5be95fc646b7c8f4b7eaf83c5e))
-* make package can import for specific files ([870ad99](https://github.com/rahxephonz/perkakas/commit/870ad9949e04677865c259b7ffd7ed3ec28b7ae5))
+- make package can import for specific files ([09cc773](https://github.com/rahxephonz/perkakas/commit/09cc773b4332bc5be95fc646b7c8f4b7eaf83c5e))
+- make package can import for specific files ([870ad99](https://github.com/rahxephonz/perkakas/commit/870ad9949e04677865c259b7ffd7ed3ec28b7ae5))
 
 ### [0.1.6](https://github.com/rahxephonz/perkakas/compare/v0.1.5...v0.1.6) (2023-08-25)
 

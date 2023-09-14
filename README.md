@@ -456,52 +456,11 @@ const truncatedTextStart = textEllipsis({
 console.log(truncatedTextStart); // Output: "...a long text."
 ```
 
-# Tailwind CSS Class Merging Utility Function
-
-This repository contains a TypeScript function that takes an array of class names and returns a merged class name string using the `twMerge` and `clsx` functions **You dont need to install at your projects repository and it will reduce bundle sizing of your because it automatically installed when you install this package**. This utility function is particularly useful for generating Tailwind CSS class names and ensuring that duplicate class names are properly handled.
-
-## Table of Contents
-
-- [Function](#function)
-  - [`tw`](#tw)
-- [Examples](#examples)
-- [License](#license)
-
-## <a name="function"></a>Function
-
-### <a name="tw"></a>`tw(...className)`
-
-This TypeScript function takes an array of class names or class values and returns a merged class name string using the `twMerge` and `clsx` functions.
-
-- `...className` (Array of ClassValue): An array of class names or class values that will be passed to the `clsx` function to generate a single string of class names. The resulting string will then be passed to the `twMerge` function to generate a Tailwind CSS class name and break any duplicate class names.
-
-Returns: The merged class name string generated using Tailwind CSS conventions.
-
-## <a name="examples"></a>Examples
-
-Here's an example of how to use the `tw` function:
-
-```javascript
-import { tw } from "perkakas";
-
-// Create a merged class name using tw
-const mergedClassName = tw(
-  "text-blue-500",
-  "bg-gray-200",
-  "text-sm",
-  "bg-blue-500",
-  "hover:bg-blue-700",
-);
-
-console.log(mergedClassName);
-// Output: "text-blue-500 bg-gray-200 text-sm bg-blue-500 hover:bg-blue-700"
-```
-
 # Common Utility Function
 
-Maybe some common utility is avaliable in this package like copyToClipBoard
+Maybe some common utility is avaliable in this package like copyToClipBoard, compose, and listCountryCode
 
-## Usage
+## Usage copyToClipBoard
 
 ```ts
 import { copyToClipBoard } from "perkakas";
@@ -520,15 +479,44 @@ copyToClipboard({
 });
 ```
 
-## Parameters
+### Parameters
 
 - **options** (object):
   - **text** (string, required): The text you want to copy to the clipboard.
   - **action** (function, optional): An optional callback function to execute after the text is successfully copied to the clipboard.
 
-## Error Handling
+### Error Handling
 
 If an error occurs during the copying process, the function will catch the error and log it to the console.
+
+## Usage compose
+
+The `compose` function allows you to compose multiple functions together and apply them in reverse order to a given value.
+
+```ts
+import { compose } from "perkakas";
+
+// Define example functions
+const addTwo = x => x + 2;
+const multiplyByThree = x => x * 3;
+
+// Compose the functions
+const composed = compose(multiplyByThree, addTwo);
+
+// Apply the composed function
+const result = composed(5);
+
+console.log(result); // Should log 17
+```
+
+### Parameters
+
+- fns (TComposedFunc): An array of functions that will be composed together.
+
+## countryCode
+
+This array of object returning a value
+An array of country code objects, each containing code, name, and dial_code properties.
 
 ## License
 

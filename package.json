@@ -71,9 +71,7 @@
     }
   },
   "dependencies": {
-    "react": "^18.2.0",
-    "clsx": "^1.2.1",
-    "tailwind-merge": "^1.14.0"
+    "clsx": "^1.2.1"
   },
   "publishConfig": {
     "access": "public"
