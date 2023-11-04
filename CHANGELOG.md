@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.1.10](https://github.com/rahxephonz/perkakas/compare/v0.1.9...v0.1.10) (2023-09-14)
 
-
 ### Features
 
-* adding form utility data conversion ([92cfb24](https://github.com/rahxephonz/perkakas/commit/92cfb24bc5774c1336e28cd25489c3755023d64b))
+- adding form utility data conversion ([92cfb24](https://github.com/rahxephonz/perkakas/commit/92cfb24bc5774c1336e28cd25489c3755023d64b))
 
 ### [0.1.9](https://github.com/rahxephonz/perkakas/compare/v0.1.8...v0.1.9) (2023-09-14)
 

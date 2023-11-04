@@ -80,6 +80,37 @@ export const formatK: ({ value }: { value: number }) => string = ({
 };
 
 /**
+ * Format a numeric value as a human-readable price digit.
+ * If the value is less than 1000, it remains unchanged.
+ * If the value is between 1000 and 999999, it is formatted as 'k' (thousands).
+ * If the value is one million or more, it is formatted as 'M' (millions).
+ *
+ * For example:
+ * - 100 -> "100"
+ * - 1000 -> "1k"
+ * - 999999 -> "999k"
+ * - 1000000 -> "1M"
+ * - 1200000 -> "1.2M"
+ * - 10000000 -> "10M"
+ *
+ * @param {number} value - The numeric value to format.
+ * @returns {string} The formatted price digit as a string.
+ */
+export const formatPriceDigit = (value: number): string => {
+  if (value < 1000) {
+    return value.toString();
+  } else if (value >= 1000 && value <= 999999) {
+    const kValue = Math.floor(value / 1000);
+    return kValue + "k";
+  } else if (value >= 1000000) {
+    const millionValue = value / 1000000;
+    return millionValue % 1 === 0
+      ? millionValue.toFixed(0) + "M"
+      : millionValue.toFixed(1) + "M";
+  }
+  return value.toString();
+};
+/**
  * Converts a number to a text representation in Indonesian.
  * @param {number} number - The number to convert.
  * @returns {string} Text representation in Indonesian of the given number.

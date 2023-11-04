@@ -35,7 +35,7 @@ export const replaceSpecialChar = (str: string, char: string): string => {
  * ```
  */
 export const isSpecialChar = (str: string): boolean => {
-  return str.match(/^[^a-zA-Z0-9]+$/) ? true : false;
+  return !!RegExp(/^[^a-zA-Z0-9]+$/).exec(str);
 };
 
 /**
@@ -72,4 +72,33 @@ export const titleCase = (str: string): string => {
   }
 
   return replaceSpecialChar(newStr, " ");
+};
+
+/**
+ * Converts a snake_case string to camelCase.
+ *
+ * @param {string} str - The snake_case string to be converted.
+ * @returns {string} The converted camelCase string.
+ */
+export const snakeToCamel = (str: string): string => {
+  const parts = str.split("_");
+  return (
+    parts[0] +
+    parts
+      .slice(1)
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join("")
+  );
+};
+
+/**
+ * Converts a camelCase string to snake_case.
+ *
+ * @param {string} str - The snake_case string to be converted.
+ * @returns {string} The converted camelCase string.
+ */
+export const camelToSnake = (str: string): string => {
+  return str.replace(/[\w]([A-Z])/g, function (match) {
+    return match[0] + "_" + match[1].toLowerCase();
+  });
 };

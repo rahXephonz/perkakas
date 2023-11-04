@@ -1,4 +1,9 @@
-import { countableNumber, formatK, formatRupiah } from "../currency";
+import {
+  countableNumber,
+  formatK,
+  formatPriceDigit,
+  formatRupiah,
+} from "../currency";
 
 describe("formatRupiah", () => {
   it("should format the number into Indonesian Rupiah format", () => {
@@ -52,5 +57,23 @@ describe("countableNumber", () => {
     expect(result).toBe(
       "Sembilan Ratus Delapan Puluh Tujuh Juta Enam Ratus Lima Puluh Empat Ribu Tiga Ratus Dua Puluh Satu",
     );
+  });
+});
+
+describe("formatPriceDigit", () => {
+  it("should format values less than 1000 correctly", () => {
+    expect(formatPriceDigit(100)).toBe("100");
+    expect(formatPriceDigit(999)).toBe("999");
+  });
+
+  it("should format values between 1000 and 999999 as k", () => {
+    expect(formatPriceDigit(1000)).toBe("1k");
+    expect(formatPriceDigit(999999)).toBe("999k");
+  });
+
+  it("should format values of one million or more as M", () => {
+    expect(formatPriceDigit(1000000)).toBe("1M");
+    expect(formatPriceDigit(1200000)).toBe("1.2M");
+    expect(formatPriceDigit(10000000)).toBe("10M");
   });
 });
