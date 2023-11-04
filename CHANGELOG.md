@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.12](https://github.com/rahxephonz/perkakas/compare/v0.1.10...v0.1.12) (2023-11-04)
+
+
+### Features
+
+* adding new utility for all formatting value diggit for price and snake or camelize string ([119f85e](https://github.com/rahxephonz/perkakas/commit/119f85eada08627a4de35c5f0ee2326103a585a2))
+
 ### [0.1.10](https://github.com/rahxephonz/perkakas/compare/v0.1.9...v0.1.10) (2023-09-14)
 
 ### Features
