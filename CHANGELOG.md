@@ -2,12 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.1.12](https://github.com/rahxephonz/perkakas/compare/v0.1.10...v0.1.12) (2023-11-04)
+### [0.1.13](https://github.com/rahxephonz/perkakas/compare/v0.1.12...v0.1.13) (2024-01-03)
 
 
 ### Features
 
-* adding new utility for all formatting value diggit for price and snake or camelize string ([119f85e](https://github.com/rahxephonz/perkakas/commit/119f85eada08627a4de35c5f0ee2326103a585a2))
+* **currency:** adding condition for billion value ([cb31493](https://github.com/rahxephonz/perkakas/commit/cb314930078922e2693d81b08f8cb3734de36045))
+
+### [0.1.12](https://github.com/rahxephonz/perkakas/compare/v0.1.10...v0.1.12) (2023-11-04)
+
+### Features
+
+- adding new utility for all formatting value diggit for price and snake or camelize string ([119f85e](https://github.com/rahxephonz/perkakas/commit/119f85eada08627a4de35c5f0ee2326103a585a2))
 
 ### [0.1.10](https://github.com/rahxephonz/perkakas/compare/v0.1.9...v0.1.10) (2023-09-14)
 
