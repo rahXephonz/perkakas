@@ -76,4 +76,9 @@ describe("formatPriceDigit", () => {
     expect(formatPriceDigit(1200000)).toBe("1.2M");
     expect(formatPriceDigit(10000000)).toBe("10M");
   });
+
+  it("should format values of one billion or more as B", () => {
+    expect(formatPriceDigit(1000000000)).toBe("1B");
+    expect(formatPriceDigit(1200000000)).toBe("1.2B");
+  });
 });
