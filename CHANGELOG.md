@@ -2,14 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.1.14](https://github.com/rahxephonz/perkakas/compare/v0.1.13...v0.1.14) (2024-01-17)
-
-### [0.1.13](https://github.com/rahxephonz/perkakas/compare/v0.1.12...v0.1.13) (2024-01-03)
+### [0.1.15](https://github.com/rahxephonz/perkakas/compare/v0.1.14...v0.1.15) (2024-01-17)
 
 
 ### Features
 
-* **currency:** adding condition for billion value ([cb31493](https://github.com/rahxephonz/perkakas/commit/cb314930078922e2693d81b08f8cb3734de36045))
+* **currency:** adding format crypto value and update docs ([6e0c176](https://github.com/rahxephonz/perkakas/commit/6e0c176d2974a688cc099500a65a0a70f9111885))
+
+### [0.1.14](https://github.com/rahxephonz/perkakas/compare/v0.1.13...v0.1.14) (2024-01-17)
+
+### [0.1.13](https://github.com/rahxephonz/perkakas/compare/v0.1.12...v0.1.13) (2024-01-03)
+
+### Features
+
+- **currency:** adding condition for billion value ([cb31493](https://github.com/rahxephonz/perkakas/commit/cb314930078922e2693d81b08f8cb3734de36045))
 
 ### [0.1.12](https://github.com/rahxephonz/perkakas/compare/v0.1.10...v0.1.12) (2023-11-04)
 
