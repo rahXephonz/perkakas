@@ -31,7 +31,7 @@ export const copyToClipBoard: ({
 }: {
   text: string;
   action: () => void;
-}) => void = async ({ text, action }) => {
+}) => void = async ({ text, action }): Promise<void> => {
   try {
     await navigator.clipboard.writeText(text);
     action();

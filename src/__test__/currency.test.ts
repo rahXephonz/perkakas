@@ -1,5 +1,6 @@
 import {
   countableNumber,
+  formatCryptoValue,
   formatK,
   formatPriceDigit,
   formatRupiah,
@@ -80,5 +81,16 @@ describe("formatPriceDigit", () => {
   it("should format values of one billion or more as B", () => {
     expect(formatPriceDigit(1000000000)).toBe("1B");
     expect(formatPriceDigit(1200000000)).toBe("1.2B");
+  });
+});
+
+describe("formatCryptoValue", () => {
+  it("should format crypto value correctly", () => {
+    expect(formatCryptoValue(2)).toBe("2");
+    expect(formatCryptoValue(0.0123456)).toBe("0.0123456");
+  });
+
+  it("should format crypto value correctly with 3 decimal places", () => {
+    expect(formatCryptoValue(0.12345, 3)).toBe("0.123");
   });
 });

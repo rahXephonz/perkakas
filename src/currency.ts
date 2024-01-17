@@ -203,3 +203,18 @@ export function countableNumber(number: number): string {
 
   return result.trim();
 }
+
+/**
+ * Formats a crypto price value.
+ *
+ * @param {number} value - The value to be formatted.
+ * @param {number} preFixed - The number of decimal places to fix the value to. Default is 6.
+ * @return {string} - The formatted value as a string.
+ */
+export function formatCryptoValue(value: number, preFixed: number = 7): string {
+  if (value.toString().includes(".") && value < 1) {
+    return value.toFixed(preFixed);
+  }
+
+  return value.toFixed(0);
+}

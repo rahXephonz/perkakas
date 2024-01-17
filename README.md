@@ -174,6 +174,8 @@ This repository contains a set of utility functions for formatting numbers and c
   - [formatUSD](#formatusd)
   - [formatK](#formatk)
   - [countableNumber](#countablenumber)
+  - [formatPriceDigit](#formatPriceDigit)
+  - [formatCryptoValue](#formatCryptoValue)
 - [Examples](#examples)
 
 ## <a name="functions"></a>Functions
@@ -213,6 +215,24 @@ Converts a number to a text representation in Indonesian.
 - `number` (number): The number to convert.
 
 Returns: Text representation in Indonesian of the given number.
+
+### <a name="formatPriceDigit"></a>`formatPriceDigit(value)`
+
+Formats a numeric value as formatted Digit.
+
+- `value` (number): value about price.
+
+Returns: Format a numeric value as a human-readable price digit. If the value is less than 1000, it remains unchanged. If the value is between 1000 and 999999, it is formatted as 'k' (thousands). If the value is between 1 million and 999999999, it is formatted as 'M' (millions). If the value is one billion or more, it is formatted as 'B' (billions).
+
+### <a name="formatCryptoValue"></a>`formatCryptoValue(value, prefixed)`
+
+Formats a numeric value as an Crypto price.
+
+- `value` (number): value about price.
+
+- `prefixed` (number): nominal digits for the result.
+
+Returns: The formatted Crpyto currency price string.
 
 ## <a name="examples"></a> Examples
 
