@@ -2,12 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.1.15](https://github.com/rahxephonz/perkakas/compare/v0.1.14...v0.1.15) (2024-01-17)
+### [0.1.16](https://github.com/rahxephonz/perkakas/compare/v0.1.15...v0.1.16) (2024-01-23)
 
+
+### Bug Fixes
+
+* **currency:** fix formating currency with decimal values ([75d4fba](https://github.com/rahxephonz/perkakas/commit/75d4fba07c6bc492c527ba63b17b027ac0c49da7))
+
+### [0.1.15](https://github.com/rahxephonz/perkakas/compare/v0.1.14...v0.1.15) (2024-01-17)
 
 ### Features
 
-* **currency:** adding format crypto value and update docs ([6e0c176](https://github.com/rahxephonz/perkakas/commit/6e0c176d2974a688cc099500a65a0a70f9111885))
+- **currency:** adding format crypto value and update docs ([6e0c176](https://github.com/rahxephonz/perkakas/commit/6e0c176d2974a688cc099500a65a0a70f9111885))
 
 ### [0.1.14](https://github.com/rahxephonz/perkakas/compare/v0.1.13...v0.1.14) (2024-01-17)
 
