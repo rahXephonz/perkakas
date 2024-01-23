@@ -67,9 +67,13 @@ describe("formatPriceDigit", () => {
     expect(formatPriceDigit(999)).toBe("999");
   });
 
-  it("should format values between 1000 and 999999 as k", () => {
-    expect(formatPriceDigit(1000)).toBe("1k");
-    expect(formatPriceDigit(999999)).toBe("999k");
+  it("should format values as K", () => {
+    expect(formatPriceDigit(1000)).toBe("1.0K");
+    expect(formatPriceDigit(1714)).toBe("1.7K");
+    expect(formatPriceDigit(15400)).toBe("15.4K");
+    expect(formatPriceDigit(155895)).toBe("155.9K");
+    expect(formatPriceDigit(888888)).toBe("888.9K");
+    expect(formatPriceDigit(999999)).toBe("1000.0K");
   });
 
   it("should format values of one million or more as M", () => {
@@ -90,7 +94,9 @@ describe("formatCryptoValue", () => {
     expect(formatCryptoValue(0.0123456)).toBe("0.0123456");
   });
 
-  it("should format crypto value correctly with 3 decimal places", () => {
+  it("should format crypto value correctly with decimal places", () => {
+    expect(formatCryptoValue(0.12345, 1)).toBe("0.1");
+    expect(formatCryptoValue(0.12345, 2)).toBe("0.12");
     expect(formatCryptoValue(0.12345, 3)).toBe("0.123");
   });
 });

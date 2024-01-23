@@ -14,6 +14,13 @@ describe("compose function", () => {
     expect(result).toBe(17); // (5 * 3) + 2 = 15 + 2 = 17
   });
 
+  it("should correctly compose two functions with different arguments", () => {
+    const composed = compose(addTwo, multiplyByThree);
+    const result = composed(3); // Input value is 3
+
+    expect(result).toBe(15); // (3 * 3) + 2 = 11 + 2 = 13 + 2 = 15
+  });
+
   // Test case 2: Compose with three functions
   it("should correctly compose three functions", () => {
     const composed = compose(multiplyByThree, subtractFive, addTwo);

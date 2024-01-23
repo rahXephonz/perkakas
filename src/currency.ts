@@ -88,8 +88,8 @@ export const formatK: ({ value }: { value: number }) => string = ({
  *
  * For example:
  * - 100 -> "100"
- * - 1000 -> "1k"
- * - 999999 -> "999k"
+ * - 1000 -> "1K"
+ * - 888888 -> "888.9K"
  * - 1000000 -> "1M"
  * - 1200000 -> "1.2M"
  * - 10000000 -> "10M"
@@ -99,12 +99,15 @@ export const formatK: ({ value }: { value: number }) => string = ({
  * @param {number} value - The numeric value to format.
  * @returns {string} The formatted price digit as a string.
  */
+
 export const formatPriceDigit = (value: number): string => {
   if (value < 1000) {
     return value.toString();
-  } else if (value >= 1000 && value <= 999999) {
-    const kValue = Math.floor(value / 1000);
-    return kValue + "k";
+  } else if (value >= 1000 && value < 1000000) {
+    const kValue = value / 1000;
+    return kValue % 1 === 0 && value !== 1000
+      ? kValue.toFixed(0) + "K"
+      : kValue.toFixed(1) + "K";
   } else if (value >= 1000000 && value <= 999999999) {
     const millionValue = value / 1000000;
     return millionValue % 1 === 0

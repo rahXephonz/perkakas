@@ -458,7 +458,7 @@ Returns: A JSON object where keys are form field names and values are form field
 Here's an example of how to use the `convertJsonObjectToFormData` function:
 
 ```javascript
-import { convertJsonObjectToFormData } from "your-data-conversion-module";
+import { convertJsonObjectToFormData } from "perkakas";
 
 // Create a JSON object
 const jsonObject = {
@@ -476,7 +476,7 @@ const formData = convertJsonObjectToFormData(jsonObject);
 Here's an example of how to use the `convertFormdataToJsonObject` function:
 
 ```javascript
-import { convertFormdataToJsonObject } from "your-data-conversion-module";
+import { convertFormdataToJsonObject } from "perkakas";
 
 const formData = new FormData();
 formData.append("name", "John Doe");
